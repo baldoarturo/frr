@@ -1,0 +1,8 @@
+services:
+  frr:
+    image: localhost/frr-debian
+    privileged: true
+    network_mode: bridge
+    volumes:
+      - ${PWD}/daemons:/etc/frr/daemons
+      - ${PWD}/services:/etc/services
